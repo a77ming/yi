@@ -71,7 +71,7 @@ const ChatPage = () => {
           justify-content: center;
           align-items: center;
           height: 100vh;
-          background: linear-gradient(to right, #e0f7fa, #80deea);
+          width: 100vw; /* 确保宽度覆盖整个视口 */
           font-family: 'Helvetica Neue', sans-serif;
         }
         .chat-box {
@@ -141,6 +141,18 @@ const ChatPage = () => {
         }
         .send-button:hover {
           background-color: #004d40;
+        }
+      `}</style>
+      
+      {/* 添加全局样式来重置默认的 margin 和 padding，并设置背景 */}
+      <style jsx global>{`
+        html, body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+        }
+        body {
+          background: linear-gradient(to right, #e0f7fa, #80deea);
         }
       `}</style>
     </div>
