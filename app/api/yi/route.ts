@@ -27,6 +27,6 @@ export const POST = async (req: NextRequest) => {
     return NextResponse.json(data);
   } catch (error) {
     console.error('Fetch error:', error);
-    return NextResponse.json({ error: 'Internal Server Error', details: error.message }, { status: 500 });
+    return NextResponse.json({ error: 'Internal Server Error', details: (error as any).message }, { status: 500 });
   }
 };
