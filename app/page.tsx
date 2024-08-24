@@ -96,23 +96,28 @@ const ChatPage = () => {
         .messages {
           flex: 1;
           overflow-y: auto;
-          margin-bottom: 20px;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
         }
         .message {
           padding: 12px;
           border-radius: 15px;
-          margin: 8px 0;
+          margin: 4px 0;
           max-width: 75%;
-          position: relative;
           word-wrap: break-word;
+          position: relative;
+          clear: both;
         }
         .message.user {
           background-color: #b3e5fc;
           align-self: flex-end;
+          text-align: right;
         }
         .message.assistant {
           background-color: #e0e0e0;
           align-self: flex-start;
+          text-align: left;
         }
         .input-box {
           display: flex;
