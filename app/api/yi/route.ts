@@ -3,6 +3,12 @@ import { NextRequest, NextResponse } from 'next/server';
 export const POST = async (req: NextRequest) => {
   const { model, messages, temperature } = await req.json();
 
+  // 创建系统消息
+  const initialSystemMessage = {
+    content: '你好，我是鸣酱 AI。如果你有任何问题，都可以来问我。',
+    role: 'system'
+  };
+
   try {
     const response = await fetch('https://api.lingyiwanwu.com/v1/chat/completions', {
       method: 'POST',
@@ -12,7 +18,7 @@ export const POST = async (req: NextRequest) => {
       },
       body: JSON.stringify({
         model,
-        messages,
+        messages: [initialSystemMessage, ...messages], // 将系统消息添加到消息列表的开头
         temperature
       })
     });
