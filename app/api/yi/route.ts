@@ -5,7 +5,7 @@ export const POST = async (req: NextRequest) => {
 
   // 创建系统消息
   const initialSystemMessage = {
-    content: '你好，我是鸣酱 AI。如果你有任何问题，都可以来问我。',
+    content: '你好，我是梓鸣 AI。如果你有任何问题，都可以来问我。',
     role: 'system'
   };
 
