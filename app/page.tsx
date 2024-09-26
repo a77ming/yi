@@ -45,7 +45,7 @@ const ChatPage = () => {
   return (
     <div className="container">
       <div className="chat-box">
-        <h1 className="title">鸣酱 AI对话模型</h1>
+        <h1 className="title">梓鸣 AI对话模型</h1>
         <div className="messages">
           {messages.map((msg, index) => (
             <div key={index} className={`message ${msg.role}`}>
